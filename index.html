@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="snow-container" id="snowContainer"></div>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container">
+    <button id="revealBtn">Click here</button>
+
+    <div class="profile hidden">
+      <img src="wuxH3zw.jpeg" class="logo" alt="logo" />
+      <h1 class="name">John Doe</h1>
+      <p class="description">
+        A passionate full-stack developer who builds clean, scalable and glowing UI. I love bringing designs to life with elegant code!
+      </p>
+      <div class="icons">
+        <a href="https://discord.com" target="_blank" class="icon discord"><i class="fab fa-discord"></i></a>
+        <a href="https://telegram.org" target="_blank" class="icon telegram"><i class="fab fa-telegram"></i></a>
+        <a href="https://github.com" target="_blank" class="icon github"><i class="fab fa-github"></i></a>
+        <a href="https://instagram.com" target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // User interaction trigger for autoplay
+    document.addEventListener('DOMContentLoaded', function () {
+      const music = document.getElementById('bg-music');
+      const button = document.getElementById('revealBtn');
+      button.addEventListener('click', () => {
+        music.play().catch(e => console.log("Autoplay blocked:", e));
+      });
+    });
+  </script>
+</body>
+</html>
